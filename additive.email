@@ -1,0 +1,104 @@
+From rogers@anthro.utah.edu Mon Feb 11 16:27:40 1991
+Return-Path: <rogers@anthro.utah.edu>
+Received: from arsun.anthro.utah.edu by anthro.utah.edu (4.1/Sendmail.cf-utah-anthro-server)
+	id AA27961; Mon, 11 Feb 91 16:27:38 MST
+Received: by arsun.anthro.utah.edu (4.0/SMI-4.0-utah-anthro-client)
+	id AA03824; Mon, 11 Feb 91 16:31:43 MST
+Date: Mon, 11 Feb 91 16:31:43 MST
+From: Alan R. Rogers <rogers@anthro.utah.edu>
+Message-Id: <9102112331.AA03824@arsun.anthro.utah.edu>
+To: GAULIN@vms.cis.pitt.edu
+Subject: social learning
+Status: R
+
+>At the top of page 826 you develop the idea that both r and p(hat) [pardon
+>the crude notation] are unlikely to be large.  But of course as you say,
+>they could be if u were small enough.  Then you take away that posibility by
+>saying that if u were sufficiently small we'd expect obligate behavior.
+>That seems to be your only reason for saying that r and p(hat) can't both be
+>large: am I right?  
+
+Right.
+
+If you take the frequency of social learning (p hat) as a given, then
+equation 5 expresses r as a function of u.  For phat = 0.9, that function
+looks like this: 
+
+       ......................................................................
+       .                                                                    .
+     0 .                                                                    .
+     . .                                                                    .
+     8 .                                                *   *   *   *   **  .
+       .                                     *   *   *                      .
+       .                         *   *   *                                  .
+  r  0 .                 *   *                                              .
+     . .             *                                                      .
+     4 .         *                                                          .
+       .      *                                                             .
+     0 .                                                                    .
+     . .  *                                                                 .
+     0 ......................................................................
+        0            10           20           30           40           50
+
+                                         tau
+
+where tau is the mean time between environmental changes.  You have to get
+to rather long intervals between periods of environmental change before r
+gets very large.
+
+>If so this might be one interesting issue to follow up.  I think that
+>obligate b(oops) behavior will probably take rather more than 162 generation
+>to evolve.  Thus there might be some middle ground where change is pretty
+>slow so that socially learned material is still useful, but not so slow that
+>obligate adaptations take over.  
+
+I don't think that this is a sound inference, though your conclusion may be
+correct.  Even if it takes 1000 generations for individual learning to
+evolve, it might turn out that individual learning is favored whenever the
+mean time between environmental changes exceeds 25 generations.  Dave
+Stephens has just written a paper on the rate at which individual learning
+evolves.  I haven't read it yet, but will let you know if it sheds any light
+on this subject.
+
+>You may recall that I advocated a different way of modeling costs when you 
+>were working out you model, just because I personnaly found it easier to 
+>understand.  Now it turns out to back to haunt ME!  
+>I think I might be able to figure out how to measure costs of one type of
+>learning or another but how can we measure efficiencies?  [e.g., (1-c)] 
+
+I think you suggested an additive model of costs and benefits.  I worked
+that model through, and my memory is that I got results that behaved sort of
+the same, but they were nowhere near as pretty.  That is the only reason
+that I stayed with the multiplicative formulation.  My model is especially
+strange because it has additive benefits but multiplicative costs.  Rob Boyd
+thought it was pretty strange too.
+
+But just now, I repeated the exercise, and now I wish I had taken your
+advice.  We can make my model additive by by re-writing my equation 1 as
+
+   w_I = w + b - C
+
+where C = bc in my old notation.  Equation 2 gets an analogous
+transformation, with a new paramter, S, which is equal to bs in the old
+formulation.  Now write C/b for c, and S/b for s in equations 4 and 5, and
+you have equivalent expressions for the model of additive fitness effects.
+For example, 4 becomes
+
+                 1 - C/b
+        r  = -----------------
+             (1 - u)(1 - S/b)
+
+                 b - C
+	   = ---------------
+             (1 - u)(b - S)
+
+which, isn't any worse than the original equation, and it shows that the
+quantity that I called the "efficiency" is really the excess of benefit over
+cost in the additive model.  I must have gotten mixed up when I did this
+before in order to come out with the complicated, ugly forumla that I seem
+to remember.  I wish I had published it this way!  
+
+Anyway, what you want to estimate are b - C and b - S, where b is the
+benefit of "correct" over random behavior, and C and S are the (additive)
+costs of individual and social learning.
+

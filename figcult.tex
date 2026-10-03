@@ -1,0 +1,69 @@
+% -*-latex-*-
+%Farmers and thieves
+\begin{figure}
+\begin{center}
+\mbox{%
+\beginpicture
+\setcoordinatesystem units <3in,10in>
+\setplotarea x from 0 to 1, y from 1 to 1.2
+\axis left 
+  label {Fitness}
+  ticks withvalues {IL} {SL} / at 1.1 1.2 / /
+\axis bottom 
+  label {Frequency of SL}
+  ticks numbered from 0 to 1 by 1 /
+\axis top ticks withvalues {ESS} / at 0.556 /  /
+\axis right /
+% Cultural Evolution model from Rogers (1988)
+%
+% > wS := w + b*(1-p)*(1-u)/( 1 - p*(1-u));
+%
+%                                     b (1 - p) (1 - u)
+%                           wS := w + -----------------
+%                                       1 - p (1 - u)
+% 
+% > wi := w + b*(1-c);
+%                                    wi := 1.1
+% > wI := w + b*(1-c);
+%                               wI := w + b (1 - c)
+%
+% Parameter values: w = b = 1, c = 0.9, s = 0, and u = 0.8.
+
+\put {1} [t] <10pt,-6pt> at 0 1.1
+\put {2} [t] <0pt,-10pt> at 0.05 1.191919192
+\put {3} [b] <0pt,10pt> at 0.95 1.012345679
+
+\plot 
+0 1.2 0.05 1.191919192 0.10 1.183673469 0.15 1.175257732
+0.20 1.166666667 0.25 1.157894737 0.30 1.148936170 0.35 1.139784946
+0.40 1.130434783 0.45 1.120879121 0.50 1.111111111 0.55 1.101123596
+0.60 1.090909091 0.65 1.080459770 0.70 1.069767442 0.75 1.058823529
+0.80 1.047619048 0.85 1.036144578 0.90 1.024390244 0.95 1.012345679
+1.00 1
+/
+% Fitness of Individual Learner
+\plot 0 1.1  1 1.1 /
+\setdots
+\putrule from 0.556 1 to 0.556 1.2
+\setsolid
+\put {$\Leftarrow$} [l] at 0.556 1.15
+\put {$\Rightarrow$} [r] at 0.556 1.15
+\endpicture%
+}
+\end{center}
+\caption{The fitnesses of both learning strategies and also the mean
+  fitness of the population are plotted against the frequency of social
+  learning, assuming that $w = b = 1$, $c = 0.9$, $s = 0$, and $u = 0.8$.  The
+  numbers refer to the following assumptions: (1) the costs and benefits of
+  individual learning are independent of its frequency; (2) when social
+  learning is rare, its fitness value exceeds that of individual learning
+  because it provides relatively up-to-date information at low cost; and (3)
+  when social learning is very common, its fitness value falls below that of
+  individual learning because the information it provides is out of date.
+\label{fig.cult}}
+\end{figure}
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: "sl"
+%%% End: 
